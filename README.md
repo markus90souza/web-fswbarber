@@ -7,8 +7,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - [x] Setup do banco
 - [x] Seeding do banco (colocar dados)
-- [] Introdução ao Next.js
-- [] Tailwind e Shadcn
+- [x] Introdução ao Next.js
+- [x] Tailwind e ShadcnUI
 - [] Git Hooks
 
 First, run the development server:
