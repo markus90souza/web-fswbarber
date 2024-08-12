@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-  <img alt="FSW Barber" src=".github/capa.jpg" width="100%" />
+  <img alt="FSW Barber" src=".github/capa.png" width="100%" />
 </p>
 
 ## 🚀 Tecnologias
