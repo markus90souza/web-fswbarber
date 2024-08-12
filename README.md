@@ -2,6 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+
+# TASKS 
+
+- [x] Setup do banco
+- [x] Seeding do banco (colocar dados)
+- [] Introdução ao Next.js
+- [] Tailwind e Shadcn
+- [] Git Hooks
+
 First, run the development server:
 
 ```bash
