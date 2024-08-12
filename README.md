@@ -21,8 +21,8 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML
-- CSS
+- [NextJS]()
+- [TailwindCSS]() 
 - JavaScript
 - [ScrollReveal](https://scrollrevealjs.org/)
 
@@ -34,7 +34,6 @@ DoctorCare é uma página institucional no formato One Page, responsiva, para us
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1102912263666619803). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## 📝 Licença
 
 
 ## Getting Started
@@ -46,7 +45,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 - [x] Seeding do banco (colocar dados)
 - [x] Introdução ao Next.js
 - [x] Tailwind e ShadcnUI
-- [] Git Hooks
+- [x] Git Hooks
 
 First, run the development server:
 
