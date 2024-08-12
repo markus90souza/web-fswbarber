@@ -1,6 +1,5 @@
 {
   "*.ts?(x)": [
-    "eslint --fix",
-    "prettier --write"
+    "eslint --fix"
   ]
 }
