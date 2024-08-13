@@ -1,6 +1,6 @@
 import { BarbershopItem } from '@/components/barbershop-item'
 import { BookingCard } from '@/components/booking-card'
-import { Header } from '@/components/header'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { db } from '@/lib/prisma'
@@ -15,11 +15,14 @@ import {
 const HomePage = async () => {
   const data = await db.barbershop.findMany()
 
-  console.log(data)
+  const popularBarbershops = await db.barbershop.findMany({
+    orderBy: {
+      name: 'desc',
+    },
+  })
+
   return (
     <div>
-      <Header />
-
       <div className="p-5 space-y-6">
         <h2>Olá, Marcos de Souza</h2>
         <span>Segunda feira, 07 de Agosto</span>
@@ -55,6 +58,25 @@ const HomePage = async () => {
           <Carousel className="w-full">
             <CarouselContent>
               {data.map((barbershop) => (
+                <CarouselItem
+                  className="basis-1/2 md:basis-1/2 lg:basis-1/3"
+                  key={barbershop.id}
+                >
+                  <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h3 className="text-xs uppercase font-bold text-gray-400">
+            populares
+          </h3>
+
+          <Carousel className="w-full">
+            <CarouselContent>
+              {popularBarbershops.map((barbershop) => (
                 <CarouselItem
                   className="basis-1/2 md:basis-1/2 lg:basis-1/3"
                   key={barbershop.id}

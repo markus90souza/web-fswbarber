@@ -6,5 +6,5 @@ import { MobileMenu } from './mobile-menu'
 export const Header: FC = () => {
   const isMobile = useMediaQuery('(min-width: 768px)')
 
-  return <>{isMobile ? <DesktopMenu /> : <MobileMenu />}</>
+  return <header>{isMobile ? <DesktopMenu /> : <MobileMenu />}</header>
 }
