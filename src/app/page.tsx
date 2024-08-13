@@ -1,10 +1,21 @@
+import { BarbershopItem } from '@/components/barbershop-item'
+import { BookingCard } from '@/components/booking-card'
 import { Header } from '@/components/header'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { db } from '@/lib/prisma'
 import { SearchIcon } from 'lucide-react'
 import Image from 'next/image'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
 
-const HomePage = () => {
+const HomePage = async () => {
+  const data = await db.barbershop.findMany()
+
+  console.log(data)
   return (
     <div>
       <Header />
@@ -27,6 +38,32 @@ const HomePage = () => {
             src={'/banner-01.png'}
             className="object-cover rounded-xl"
           />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h3 className="text-xs uppercase font-bold text-gray-400">
+            Agendamentos
+          </h3>
+          <BookingCard />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h3 className="text-xs uppercase font-bold text-gray-400">
+            RECOMENDADOS
+          </h3>
+
+          <Carousel className="w-full">
+            <CarouselContent>
+              {data.map((barbershop) => (
+                <CarouselItem
+                  className="basis-1/2 md:basis-1/2 lg:basis-1/3"
+                  key={barbershop.id}
+                >
+                  <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
