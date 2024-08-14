@@ -22,8 +22,8 @@ const HomePage = async () => {
   })
 
   return (
-    <div>
-      <div className="p-5 space-y-6">
+    <div className="w-full">
+      <div className="p-5 space-y-6 max-w-7xl mx-auto">
         <h2>Olá, Marcos de Souza</h2>
         <span>Segunda feira, 07 de Agosto</span>
 
@@ -59,7 +59,7 @@ const HomePage = async () => {
             <CarouselContent>
               {data.map((barbershop) => (
                 <CarouselItem
-                  className="basis-1/2 md:basis-1/2 lg:basis-1/3"
+                  className="basis-1/2 md:basis-1/2 lg:basis-1/5"
                   key={barbershop.id}
                 >
                   <BarbershopItem key={barbershop.id} barbershop={barbershop} />
@@ -78,7 +78,7 @@ const HomePage = async () => {
             <CarouselContent>
               {popularBarbershops.map((barbershop) => (
                 <CarouselItem
-                  className="basis-1/2 md:basis-1/2 lg:basis-1/3"
+                  className="basis-1/2 md:basis-1/2 lg:basis-1/5"
                   key={barbershop.id}
                 >
                   <BarbershopItem key={barbershop.id} barbershop={barbershop} />
