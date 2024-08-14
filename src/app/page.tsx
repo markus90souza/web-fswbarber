@@ -1,25 +1,25 @@
-import { BarbershopItem } from '@/components/barbershop-item'
+// import { BarbershopItem } from '@/components/barbershop-item'
 import { BookingCard } from '@/components/booking-card'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { db } from '@/lib/prisma'
+// import { db } from '@/lib/prisma'
 import { SearchIcon } from 'lucide-react'
 import Image from 'next/image'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel'
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+// } from '@/components/ui/carousel'
 
 const HomePage = async () => {
-  const data = await db.barbershop.findMany()
+  // const data = await db.barbershop.findMany()
 
-  const popularBarbershops = await db.barbershop.findMany({
-    orderBy: {
-      name: 'desc',
-    },
-  })
+  // const popularBarbershops = await db.barbershop.findMany({
+  //   orderBy: {
+  //     name: 'desc',
+  //   },
+  // })
 
   return (
     <div className="w-full">
@@ -49,7 +49,7 @@ const HomePage = async () => {
           </h3>
           <BookingCard />
         </div>
-
+        {/* 
         <div className="flex flex-col gap-3">
           <h3 className="text-xs uppercase font-bold text-gray-400">
             RECOMENDADOS
@@ -86,7 +86,7 @@ const HomePage = async () => {
               ))}
             </CarouselContent>
           </Carousel>
-        </div>
+        </div> */}
       </div>
     </div>
   )
